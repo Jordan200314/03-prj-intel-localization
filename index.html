@@ -8,7 +8,7 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google Font -->
+  <!-- Arabic Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
@@ -16,19 +16,18 @@
 
 <body>
 
-<!-- HERO SECTION -->
-<header class="text-center text-white py-5" style="background-color:#005a9e;">
+<!-- HERO -->
+<header class="text-center text-white py-5 hero">
   <div class="container">
     <img src="img/intel-header-logo.svg" alt="شعار شركة إنتل" width="120" class="mb-3">
 
     <h1 class="fw-bold">الاستدامة عبر العصور</h1>
 
     <p class="lead">
-      استكشف رحلة إنتل عبر الزمن، واكتشف كيف ساهم التزامنا بالابتكار 
-      في تشكيل مستقبل أكثر استدامة للتكنولوجيا وكوكبنا.
+      استكشف رحلة إنتل عبر الزمن واكتشف كيف ساهم الابتكار
+      في بناء مستقبل أكثر استدامة.
     </p>
 
-    <!-- Modal Button (Bonus) -->
     <button class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#aboutModal">
       تعرف على المزيد
     </button>
@@ -36,45 +35,64 @@
 </header>
 
 
-<!-- TIMELINE SECTION -->
+<!-- TIMELINE CARDS -->
 <section class="container my-5">
   <div class="row g-4">
 
-    <!-- Example Card -->
+    <!-- CARD 1 -->
     <div class="col-md-4">
-      <div class="card shadow h-100">
-        <img src="img/1.jpg" class="card-img-top" alt="صورة تأسيس شركة إنتل عام 1968">
+      <div class="card shadow h-100 card-hover">
+
+        <div class="card-image-wrapper">
+          <img src="img/1.jpg" alt="تأسيس شركة إنتل عام 1968">
+          <div class="card-overlay">
+            تأسست شركة إنتل عام 1968 وكانت بداية
+            ثورة في عالم أشباه الموصلات.
+          </div>
+        </div>
+
         <div class="card-body">
           <h5 class="card-title">1968 - تأسيس إنتل</h5>
-          <p class="card-text">
-            أعاد روبرت نويس وجوردون مور تسمية الشركة إلى إنتل،
-            مما أسس لحقبة من الابتكار التكنولوجي.
-          </p>
         </div>
+
       </div>
     </div>
 
+    <!-- CARD 2 -->
     <div class="col-md-4">
-      <div class="card shadow h-100">
-        <img src="img/3.jpg" class="card-img-top" alt="معالج إنتل 8086">
+      <div class="card shadow h-100 card-hover">
+
+        <div class="card-image-wrapper">
+          <img src="img/3.jpg" alt="معالج إنتل 8086">
+          <div class="card-overlay">
+            إطلاق معالج 8086 الذي أسس بنية x86
+            المستخدمة في أجهزة الكمبيوتر حول العالم.
+          </div>
+        </div>
+
         <div class="card-body">
           <h5 class="card-title">1978 - معالج 8086</h5>
-          <p class="card-text">
-            إطلاق معالج 8086 الذي أسس بنية x86 المستخدمة عالميًا.
-          </p>
         </div>
+
       </div>
     </div>
 
+    <!-- CARD 3 -->
     <div class="col-md-4">
-      <div class="card shadow h-100">
-        <img src="img/4.jpg" class="card-img-top" alt="معالج إنتل 386">
+      <div class="card shadow h-100 card-hover">
+
+        <div class="card-image-wrapper">
+          <img src="img/4.jpg" alt="معالج إنتل 386">
+          <div class="card-overlay">
+            إدخال بنية 32-بت التي حسنت الأداء
+            ودعمت تعدد المهام.
+          </div>
+        </div>
+
         <div class="card-body">
           <h5 class="card-title">1985 - معالج 386</h5>
-          <p class="card-text">
-            إدخال بنية 32-بت وتحسين الأداء لأجهزة الحاسوب الشخصية.
-          </p>
         </div>
+
       </div>
     </div>
 
@@ -82,17 +100,14 @@
 </section>
 
 
-<!-- RESPONSIVE 3-COLUMN SECTION -->
+<!-- 3 COLUMN SECTION -->
 <section class="container my-5">
   <div class="row text-center g-4">
 
     <div class="col-md-4">
       <div class="p-4 shadow-sm bg-white rounded h-100">
         <h3>📊 استراتيجية RISE</h3>
-        <p>
-          تحدد استراتيجية RISE أهدافًا طموحة لعام 2030 
-          لدفع التقدم في العمل المناخي وإدارة الموارد.
-        </p>
+        <p>أهداف طموحة لعام 2030 لدفع العمل المناخي والاستدامة.</p>
         <a href="#" class="btn btn-outline-primary">تعلم أكثر</a>
       </div>
     </div>
@@ -100,10 +115,7 @@
     <div class="col-md-4">
       <div class="p-4 shadow-sm bg-white rounded h-100">
         <h3>🌍 الالتزام</h3>
-        <p>
-          تعهدت إنتل بتحقيق صافي انبعاثات صفرية بحلول 2040
-          عبر عملياتها العالمية.
-        </p>
+        <p>تحقيق صافي انبعاثات صفرية بحلول 2040.</p>
         <a href="#" class="btn btn-outline-primary">تعلم أكثر</a>
       </div>
     </div>
@@ -111,10 +123,7 @@
     <div class="col-md-4">
       <div class="p-4 shadow-sm bg-white rounded h-100">
         <h3>💧 المياه والنفايات</h3>
-        <p>
-          تحافظ إنتل على الموارد المائية وتدعم الاقتصاد الدائري
-          من خلال إعادة التدوير والاستدامة.
-        </p>
+        <p>الحفاظ على الموارد ودعم الاقتصاد الدائري.</p>
         <a href="#" class="btn btn-outline-primary">تعلم أكثر</a>
       </div>
     </div>
@@ -123,27 +132,22 @@
 </section>
 
 
-<!-- NEWSLETTER FORM -->
+<!-- NEWSLETTER -->
 <section class="container my-5 text-center">
-  <h2 class="mb-4">📩 اشترك في نشرتنا الإخبارية للاستدامة</h2>
+  <h2 class="mb-4">📩 اشترك في نشرتنا الإخبارية</h2>
 
   <form class="row justify-content-center g-3" aria-label="نموذج الاشتراك">
 
     <div class="col-md-6">
-      <label for="email" class="form-label visually-hidden">البريد الإلكتروني</label>
-      <input 
-        type="email"
-        id="email"
-        class="form-control"
-        placeholder="أدخل بريدك الإلكتروني"
-        required
-        aria-required="true">
+      <label for="email" class="visually-hidden">البريد الإلكتروني</label>
+      <input type="email" id="email"
+             class="form-control"
+             placeholder="أدخل بريدك الإلكتروني"
+             required>
     </div>
 
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary">
-        اشتراك
-      </button>
+      <button type="submit" class="btn btn-primary">اشتراك</button>
     </div>
 
   </form>
@@ -156,7 +160,7 @@
 </footer>
 
 
-<!-- MODAL (Bonus Interactivity) -->
+<!-- MODAL -->
 <div class="modal fade" id="aboutModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content text-end">
@@ -165,8 +169,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        تلتزم إنتل بالابتكار المسؤول لبناء مستقبل أكثر استدامة
-        للتكنولوجيا والمجتمع.
+        تلتزم إنتل بالابتكار المسؤول لبناء مستقبل أكثر استدامة.
       </div>
     </div>
   </div>
@@ -176,10 +179,9 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Auto Language Detection (Bonus) -->
+<!-- Auto RTL Detection -->
 <script>
   const userLang = navigator.language || navigator.userLanguage;
-
   if (userLang.startsWith('ar')) {
     document.documentElement.lang = 'ar';
     document.documentElement.dir = 'rtl';
