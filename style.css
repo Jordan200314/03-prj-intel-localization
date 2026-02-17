@@ -1,144 +1,87 @@
-/* General Styles */
+/* GLOBAL */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Cairo', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f5f9;
+  direction: rtl;
+  text-align: right;
 }
 
-/* Hero Section */
+/* Accessibility Focus */
+:focus {
+  outline: 3px solid #005a9e;
+  outline-offset: 3px;
+}
+
+/* HERO */
 .hero {
-  background-color: #0071c5; /* Intel blue */
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
+  background-color: #005a9e;
 }
 
-.hero img.logo {
-  width: 120px;
-  margin-bottom: 1rem;
-}
-
-.hero h1 {
-  margin: 0.5rem 0;
-  font-size: 2.5rem;
-}
-
-.hero p {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-/* Timeline Section */
-.timeline-container {
-  overflow-x: auto;
-  padding: 2rem;
-}
-
-.timeline {
-  display: flex;
-  gap: 2rem;
-  scroll-snap-type: x mandatory;
-}
-
-/* Card Styles */
+/* CARDS */
 .card {
-  flex: 0 0 320px; /* wider cards */
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE WRAPPER */
+.card-image-wrapper {
+  position: relative;
   overflow: hidden;
 }
 
-.card h2 {
-  margin: 0.5rem 1rem 0 1rem;
-  color: #0071c5;
-}
-
-.card h3 {
-  margin: 0.3rem 1rem;
-  font-weight: normal;
-}
-
-/* Card Image and Overlay */
-.card-content {
-  position: relative; /* overlay sits on top of image */
-}
-
-.card-content img {
+.card-image-wrapper img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
   display: block;
-  border-radius: 10px 10px 0 0;
-  height: 220px; /* taller image for bigger card */
-  object-fit: cover; /* keeps image aspect ratio */
 }
 
-/* Transparent Blue Overlay */
-.overlay {
+/* BLUE OVERLAY */
+.card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 113, 197, 0.8); /* Intel blue, semi-transparent */
+  inset: 0;
+  background: rgba(0, 90, 158, 0.85);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  opacity: 0; /* hidden by default */
-  transform: translateY(100%); /* slide up from bottom */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* smooth fade & slide */
-  border-radius: 10px;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
 }
 
-/* Hover Effect: Show Overlay */
-.card-content:hover .overlay {
+.card-hover:hover .card-overlay {
   opacity: 1;
-  transform: translateY(0); /* slide overlay into view */
+  transform: translateY(0);
 }
 
-/* Card Hover Effect */
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* FORM */
+form input {
+  border-radius: 8px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #555;
+form input:focus {
+  border-color: #005a9e;
+  box-shadow: 0 0 0 0.2rem rgba(0, 90, 158, 0.25);
 }
 
-/* Responsive Design */
+form button {
+  border-radius: 8px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-
-  .card-content img {
-    height: 180px; /* smaller height for mobile */
-  }
-}
-
-/* Extra large screens (optional) */
-@media (min-width: 1200px) {
-  .card {
-    flex: 0 0 350px;
-  }
-
-  .card-content img {
-    height: 240px;
+  .card-image-wrapper img {
+    height: 180px;
   }
 }
